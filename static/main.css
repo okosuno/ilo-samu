@@ -1,0 +1,97 @@
+h1 {
+  font-family:'Gentium Book Plus' !important; 
+  color: #ffffff !important;
+}
+
+a { 
+  font-family:'Gentium Book Plus' !important; 
+  color: #C16F7F !important;
+}
+
+p.lead {
+  font-family: 'Gentium Book Plus' !important;
+  color: #B2B3B3 !important;
+}
+
+body {
+  background-color: #020304 !important;
+}
+
+div.jumbotron {
+  background-color: #020304 !important;
+}
+
+div.note {
+  font-style: italic;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap:  wrap;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  align-items: center;
+  border-top: 1px solid rgb(255, 255, 255, 0.1) !important;
+}
+
+.container {
+  background-color: #020304 !important;
+}
+
+.form-control {
+  background-color: #020304 !important;
+  color: #7B7A7A !important;
+  text-align: center;
+  max-width: 40%;
+}
+
+.form-control:focus {
+  border-color: #ffffff !important;
+}
+
+.footer-text {
+  font-family: 'Gentium Book Plus' !important;
+  color: #797979 !important;
+  text-align: center !important;
+}
+
+.footer-col {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-basis: 50% !important;
+  flex: 1 !important;
+}
+
+.btn-primary {
+  font-weight: 900;
+  background-color: #185469 !important;
+  color: #B5B4B4 !important;
+  border-color: #185469;
+  margin: auto !important;
+  display: block !important;
+}
+
+.btn-primary:hover {
+  color: #ffffff !important;
+  background-color: #206A84 !important;
+  border-color: #185469;
+}
+
+.btn-primary:focus {
+  color: #ffffff !important;
+  background-color: #206A84 !important;
+  border-color: #185469;
+}
+
+.copyright {
+  font-family:'Gentium Book Plus' !important; 
+  padding: 2% 2% 0% 2%;
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+}

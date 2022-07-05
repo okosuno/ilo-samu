@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>ilo samu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+
+  <body>
+
+  <div class="background-image"></div>
+    <main role="main" class="container">
+        <div class="starter-template">
+          <hr style="mx-auto">
+          {% block body %}
+          {% endblock %}
+        </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  <footer class="text-center text-lg-start fixed-bottom">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col">
+          <div class="footer-text">nasin ilo ni kepeken nimi tan <a href ="https://github.com/metanomial">jan Pensamin</a>. </br>nimi nasin li tan <a href="https://openai.com/">ilo Open Aja</a>.</div>
+        </div>
+        <div class="col"> 
+          <div class="footer-text">ilo ni li mama tan <a href="https://github.com/okosuno/">jan okosuno</a>.</br> lipu ni li mama tan <a href="https://getbootstrap.com/">ilo Pusa</a> & <a href="https://flask.palletsprojects.com/en/2.1.x/">ilo Paka</a>.</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="copyright">ilo ni li mama kepeken <a href="https://mit-license.org/">MIT License</a>.
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+    
+  <h1 class="display-4" align="center"> {{ nimisin }} </h1>
+  <p class="lead" align="center" style="line-height:3px"> {{ definition }}
+  <div class="note">toki: ilo Open Aja ken pana e nimi nasin nasa e nimi nasin ike.</div></p>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p class="lead" align="center" style="font-size:13px;visibility:{{ field_visibility }}">lupa anpa la o pana <a href="https://openai.com/api/">ilo open sina pi Open Aja Apija</a></p>
+        <div class="dyn_vis" style="visibility:{{ field_visibility }};position:{{ field_position }}">
+        {{ form.key(size=51, class_="form-control mx-auto") }} </br>
+        </div>
+        {{ form.submit(class_="btn btn-primary") }}
+    </form>
+    <hr class="my-4">
+    </p>
+  </div>
+{% endblock %}
