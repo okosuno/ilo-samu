@@ -9,8 +9,9 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 app = Flask(__name__)
 app.secret_key = os.urandom(42)
 
+VOWELS = [ "a",   "e",   "i",   "o",   "u", ]
+
 SYLLABLES = [
-    "a",   "e",   "i",   "o",   "u",
    "ja",  "je",  "jo",  "ju",  "ka",
    "ke",  "ki",  "ko",  "ku",  "la",
    "le",  "li",  "lo",  "lu",  "ma",
@@ -26,7 +27,7 @@ SYLLABLES = [
    "sa",  "se",  "si",  "so",  "su",
    "ta",  "te",  "to",  "tu",  "wa",
    "we",  "wi",
-];
+]
 
 class KeyForm(FlaskForm):
     key = PasswordField('OpenAI key', validators=[DataRequired()])
@@ -49,15 +50,20 @@ def index():
 
         # build nimisin from syllables
         ra.seed()
-        ch_a = ra.choice(SYLLABLES)
+        # diphthong evasion method
+        first_syll = SYLLABLES + VOWELS
+        ch_a = ra.choice(first_syll)
         if ch_a[0] == "n" and len(ch_a) == 3:
             ch_a = ch_a[1:3]
         ch_b = ra.choice(SYLLABLES)
         nimisin = ch_a + ch_b
 
-        for _ in range(0,ra.randint(0,3)):
-            ch_c = ra.choice(SYLLABLES)
-            nimisin += ch_c
+        # possibility for very long words
+        while True:
+            if ra.random() > 0.5:
+                ch_c = ra.choice(SYLLABLES)
+                nimisin += ch_c
+            else: break
 
         # ai query for definition
         prompt = "define this fictional toki pona word in 5 words: \"" + nimisin + "\"\n"
